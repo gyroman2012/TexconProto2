@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:toggle_switch/toggle_switch.dart';
 import 'entrypage.dart';
 import 'newpage.dart';
 
@@ -65,6 +65,7 @@ class listDataItem extends StatelessWidget {
   String itemName;
 
   listDataItem(this.itemName);
+  
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -94,7 +95,26 @@ class listDataItem extends StatelessWidget {
                 child: Text('Time Card'),
               ),
             ),
-            SizedBox(width: 500),
+            SizedBox(width: 400),
+            Text('Done? '),
+            ToggleSwitch(
+              minWidth: 90.0,
+              cornerRadius: 20.0,
+              activeBgColors: [
+                [Colors.green[800]!],
+                [Colors.red[800]!]
+              ],
+              activeFgColor: Colors.white,
+              inactiveBgColor: Colors.grey,
+              inactiveFgColor: Colors.white,
+              initialLabelIndex: 1,
+              totalSwitches: 2,
+              labels: ['YES', 'NO'],
+              radiusStyle: true,
+              onToggle: (index) {
+                print('switched to: $index');
+              },
+            ),
           ],
         ),
       ),

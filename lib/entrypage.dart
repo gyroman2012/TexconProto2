@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:listview/homepage.dart';
+import 'package:listview/memopage.dart';
 
 // ignore: unused_import
 import 'loginpage.dart';
@@ -14,7 +15,7 @@ class EntryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Time Tracker App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -70,7 +71,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                           height: 10.0,
                         ),
                         Text(
-                          'David Dyson',
+                          'Brian Gurtz',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 20.0,
@@ -127,7 +128,12 @@ class _MyLoginPageState extends State<MyLoginPage> {
                           ),
                         ),
                         ListTile(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Memo()));
+                          },
                           leading: Icon(
                             Icons.logout,
                             color: Colors.white,
@@ -159,14 +165,14 @@ class _MyLoginPageState extends State<MyLoginPage> {
                 child: Scaffold(
                   backgroundColor: Colors.grey,
                   appBar: AppBar(
-                    title: Text('Login Page'),
+                    title: Text('Supervisor Page'),
                   ),
                   body: Center(
                     child: Column(
                       children: [
                         SizedBox(height: 50),
                         Text(
-                            'This is where supervisor specific\nmessages will be displayed\nfor the supervisors\nto see before logging in.'),
+                            'This is where supervisor specific\nmessages will be displayed\nfor the supervisors\nto see after logging in.'),
                         SizedBox(height: 150),
                         Text('Swipe right to open menu.'),
                         SizedBox(height: 150),

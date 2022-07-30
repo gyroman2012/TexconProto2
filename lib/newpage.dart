@@ -27,7 +27,23 @@ class _NewPageState extends State<NewPage> {
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
-        title: Text('DateTime Picker'),
+        title: Text('Time Card'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.add),
+            onPressed: () => debugPrint("Add"),
+          ),
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () => debugPrint('Search'),
+          ),
+          IconButton(
+              icon: Icon(Icons.home),
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Home()));
+              }),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

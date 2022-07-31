@@ -211,7 +211,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     SizedBox(
                         height: 180,
                         child: Image.asset(
-                          "assets/texconimage.jpg",
+                          "assets/images/texconimage.jpg",
                           fit: BoxFit.contain,
                         )),
                     const SizedBox(height: 45),

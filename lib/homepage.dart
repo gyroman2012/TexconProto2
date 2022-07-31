@@ -27,6 +27,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'Employee List',
           style: TextStyle(fontSize: 19.0),
@@ -65,7 +66,7 @@ class listDataItem extends StatelessWidget {
   String itemName;
 
   listDataItem(this.itemName);
-  
+
   @override
   Widget build(BuildContext context) {
     return Card(

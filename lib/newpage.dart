@@ -16,6 +16,8 @@ class NewPage extends StatefulWidget {
 class _NewPageState extends State<NewPage> {
   String _date = "Not set";
   String _time = "Not set";
+  String _date2 = "Not set";
+  String _time2 = "Not set";
 
   @override
   void initState() {
@@ -27,6 +29,7 @@ class _NewPageState extends State<NewPage> {
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
+        centerTitle: true,
         title: Text('Time Card'),
         actions: <Widget>[
           IconButton(
@@ -208,7 +211,7 @@ class _NewPageState extends State<NewPage> {
                       minTime: DateTime(2000, 1, 1),
                       maxTime: DateTime(2022, 12, 31), onConfirm: (date) {
                     print('confirm $date');
-                    _date = '${date.year} - ${date.month} - ${date.day}';
+                    _date2 = '${date.year} - ${date.month} - ${date.day}';
                     setState(() {});
                   }, currentTime: DateTime.now(), locale: LocaleType.en);
                 },
@@ -229,7 +232,7 @@ class _NewPageState extends State<NewPage> {
                                   color: Colors.teal,
                                 ),
                                 Text(
-                                  " $_date",
+                                  " $_date2",
                                   style: TextStyle(
                                       color: Colors.teal,
                                       fontWeight: FontWeight.bold,
@@ -266,7 +269,7 @@ class _NewPageState extends State<NewPage> {
                       ),
                       showTitleActions: true, onConfirm: (time) {
                     print('confirm $time');
-                    _time = '${time.hour} : ${time.minute} : ${time.second}';
+                    _time2 = '${time.hour} : ${time.minute} : ${time.second}';
                     setState(() {});
                   }, currentTime: DateTime.now(), locale: LocaleType.en);
                   setState(() {});
@@ -288,7 +291,7 @@ class _NewPageState extends State<NewPage> {
                                   color: Colors.teal,
                                 ),
                                 Text(
-                                  " $_time",
+                                  " $_time2",
                                   style: TextStyle(
                                       color: Colors.teal,
                                       fontWeight: FontWeight.bold,

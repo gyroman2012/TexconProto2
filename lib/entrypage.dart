@@ -165,6 +165,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                 child: Scaffold(
                   backgroundColor: Colors.grey,
                   appBar: AppBar(
+                    centerTitle: true,
                     title: Text('Supervisor Page'),
                   ),
                   body: Center(

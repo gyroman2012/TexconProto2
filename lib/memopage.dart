@@ -13,13 +13,20 @@ class _MemoState extends State<Memo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          'Texcon',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+        ),
+      ),
       backgroundColor: Colors.grey,
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 50),
+            SizedBox(height: 100),
             Text(
-                'This is where company-wide\nmessages will be displayed\nfor the supervisors\nto see before logging in.'),
+                'This is where company-wide\nmessages could be displayed\nfor the supervisors\nto see before logging in.'),
             SizedBox(height: 150),
             ElevatedButton(
               onPressed: () {
@@ -30,7 +37,7 @@ class _MemoState extends State<Memo> {
                   ),
                 );
               },
-              child: Text('Poke Me! I dare you!'),
+              child: Text('Enter Login'),
             ),
           ],
         ),

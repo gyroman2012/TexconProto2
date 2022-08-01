@@ -10,18 +10,16 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final List<String> listof = [
-    "Frank",
-    "Ulysses",
-    "Carrie",
-    "Kevin",
-    "Yurie",
-    "Orvil",
-    "Urich",
-    "Paul",
+    "Brian",
     "Ryan",
-    "Irvin",
-    "Charles",
-    "Kirk",
+    "Irving",
+    "Alan",
+    "Nelly",
+    "George",
+    "Urich",
+    "Ralph",
+    "Tyler",
+    "Zippy",
   ];
   @override
   Widget build(BuildContext context) {

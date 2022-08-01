@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:listview/homepage.dart';
+// ignore: unused_import
 import 'package:listview/memopage.dart';
 
 // ignore: unused_import
@@ -132,7 +133,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Memo()));
+                                    builder: (context) => LoginScreen()));
                           },
                           leading: Icon(
                             Icons.logout,
@@ -171,11 +172,15 @@ class _MyLoginPageState extends State<MyLoginPage> {
                   body: Center(
                     child: Column(
                       children: [
-                        SizedBox(height: 50),
+                        SizedBox(height: 100),
                         Text(
-                            'This is where supervisor specific\nmessages will be displayed\nfor the supervisors\nto see after logging in.'),
+                            'This is where supervisor specific\nmessages Could be displayed\nfor the supervisors\nto see after logging in.'),
                         SizedBox(height: 150),
-                        Text('Swipe right to open menu.'),
+                        Text(
+                          'Swipe right to open menu.',
+                          style: TextStyle(
+                              fontSize: 22, fontWeight: FontWeight.bold),
+                        ),
                         SizedBox(height: 150),
                         // ElevatedButton(
                         //   onPressed: () {
